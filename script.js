@@ -44,7 +44,7 @@ orderButtons.forEach(button => {
         const planPrice = this.getAttribute('data-price');
         
         // Teks pesan yang akan dikirim ke WhatsApp
-        const message = `Halo Admin Eleganza,%0A%0ASaya tertarik untuk memesan *Jasa Undangan Digital*.%0A%0A*Paket:* ${planName}%0A*Harga:* Rp ${planPrice}%0A%0AMohon informasi lebih lanjut mengenai cara pemesanan dan metode pembayarannya. Terima kasih!`;
+        const message = `Halo Admin Undangan Pro,%0A%0ASaya tertarik untuk memesan *Jasa Undangan Digital*.%0A%0A*Paket:* ${planName}%0A*Harga:* Rp ${planPrice}%0A%0AMohon informasi lebih lanjut mengenai cara pemesanan dan metode pembayarannya. Terima kasih!`;
         
         // Buat link WhatsApp
         const waLink = `https://wa.me/${waNumber}?text=${message}`;

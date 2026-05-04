@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan | Andi Iccank & Dewi Mulya Sari</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <link rel="stylesheet" href="undangan.css">
+</head>
+<body>
+
+    <!-- Audio Player -->
+    <audio id="bg-music" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="music-btn" class="music-btn">
+        <i class="ph ph-play"></i>
+    </button>
+
+    <div class="invitation-wrapper">
+        <!-- Corner Ornaments -->
+        <img src="assets/floral_corner.png" class="ornament top-left" alt="">
+        <img src="assets/floral_corner.png" class="ornament top-right" alt="">
+        <img src="assets/floral_corner.png" class="ornament bottom-left" alt="">
+        <img src="assets/floral_corner.png" class="ornament bottom-right" alt="">
+
+        <!-- Decorative inner border -->
+        <div class="inner-border"></div>
+
+        <section class="section-opening animate-on-scroll">
+            <h2 class="bismillah">Bismillahirrahmanirrahim</h2>
+            <h3 class="salam">Assalamu'alaikum Warahmatullahi Wabarakatuh</h3>
+            <div class="divider">
+                <i class="ph ph-flower-lotus"></i>
+            </div>
+            <p class="opening-text">
+                Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. Ya Allah, perkenankanlah kami merangkai kasih sayang yang Kau ciptakan dalam ikatan pernikahan:
+            </p>
+        </section>
+
+        <section class="section-couple animate-on-scroll delay-1">
+            <div class="couple-illustration">
+                <img src="assets/bugis_couple.png" alt="Ilustrasi Pasangan Bugis">
+            </div>
+            
+            <div class="groom animate-on-scroll">
+                <div class="role"><i class="ph-fill ph-user"></i> Mempelai Pria:</div>
+                <h1 class="name">Andi Iccank</h1>
+                <p class="parents">(Putra dari Keluarga Bpk. Andi Rafiuddin & Ibu Sitti Fatimah)</p>
+            </div>
+            
+            <div class="bride animate-on-scroll">
+                <div class="role"><i class="ph-fill ph-user-circle"></i> Mempelai Wanita:</div>
+                <h1 class="name">Dewi Mulya Sari</h1>
+                <p class="parents">(Putri dari Keluarga Alm. H. Haruna & Siti Halimah)</p>
+            </div>
+        </section>
+
+        <section class="section-events animate-on-scroll">
+            <div class="events-grid">
+                <!-- Akad Nikah -->
+                <div class="event-card animate-on-scroll">
+                    <div class="event-icon"><i class="ph ph-rings"></i></div>
+                    <h2>AKAD NIKAH</h2>
+                    <div class="event-details">
+                        <p><strong>Hari/Tanggal:</strong><br>Selasa, 25 Maret 2025</p>
+                        <p><strong>Waktu:</strong><br>09.00 WITA – Selesai</p>
+                        <p><strong>Tempat:</strong><br>Rumah Mempelai Wanita,<br>Jl. Mappoadang Lr.2 No. 5<br>Kota Makassar</p>
+                    </div>
+                </div>
+
+                <!-- Resepsi -->
+                <div class="event-card animate-on-scroll delay-1">
+                    <div class="event-icon"><i class="ph ph-fork-knife"></i></div>
+                    <h2>RESEPSI PERNIKAHAN</h2>
+                    <div class="event-details">
+                        <p><strong>Hari/Tanggal:</strong><br>Selasa, 25 Maret 2025</p>
+                        <p><strong>Waktu:</strong><br>11.00 WITA – Selesai</p>
+                        <p><strong>Tempat:</strong><br>Gedung Juang 45,<br>Jl. Sultan Alauddin Makassar</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-closing animate-on-scroll">
+            <p class="closing-text">
+                Merupakan suatu kehormatan bagi kami jika Bapak/Ibu/Saudara(i) berkenan hadir memberikan doa restu.
+            </p>
+            
+            <div class="family-list">
+                <h3>Keluarga Besar:</h3>
+                <p>Bpk. Andi Rafiuddin & Ibu Sitti Fatimah<br>(Anggota DPRD Kabupaten Konawe Utara)<br><br>Seluruh Keluarga Besar dari Kedua Mempelai</p>
+            </div>
+            
+            <p class="thank-you">Atas kehadiran dan doa restunya, kami ucapkan terima kasih.</p>
+            
+            <h3 class="salam">Wassalamu'alaikum Warahmatullahi Wabarakatuh</h3>
+            
+            <div class="divider">
+                <i class="ph ph-flower-lotus"></i>
+            </div>
+            
+            <p class="signature-intro">Kami yang berbahagia,</p>
+            <h2 class="signature-names">Andi Iccank & Dewi Mulya Sari</h2>
+        </section>
+    </div>
+
+    <script src="undangan.js"></script>
+</body>
+</html>

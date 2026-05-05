@@ -62,8 +62,8 @@
         <div class="hero-visual fade-in-up delay-1">
             <!-- Glassmorphism Phone Mockup -->
             <div class="phone-mockup">
-                <div class="phone-screen" style="padding: 0; overflow: hidden;">
-                    <img src="assets/sample_invitation.png" alt="Contoh Undangan Digital" style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit; display: block;">
+                <div class="phone-screen" style="padding: 0; overflow: hidden; background-color: #1a1a1a;">
+                    <img id="slideshow-image" src="assets/sample_invitation.png" alt="Contoh Undangan Digital" style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit; display: block; transition: opacity 0.5s ease-in-out;">
                 </div>
             </div>
         </div>
@@ -123,16 +123,16 @@
         </div>
         
         <div class="theme-filters fade-in-up">
-            <button class="filter-btn active">Semua</button>
-            <button class="filter-btn">Minimalis</button>
-            <button class="filter-btn">Floral</button>
-            <button class="filter-btn">Mewah</button>
+            <button class="filter-btn active" data-filter="all">Semua</button>
+            <button class="filter-btn" data-filter="minimalis">Minimalis</button>
+            <button class="filter-btn" data-filter="floral">Floral</button>
+            <button class="filter-btn" data-filter="mewah">Mewah</button>
         </div>
 
         <div class="themes-grid">
             <!-- Theme Card 1 -->
-            <div class="theme-card fade-in-up">
-                <div class="theme-image theme-1">
+            <div class="theme-card fade-in-up" data-category="minimalis">
+                <div class="theme-image theme-1" style="background-image: url('assets/sample_invitation_2.png'); background-size: cover; background-position: center;">
                     <div class="theme-overlay">
                         <button class="btn-secondary btn-small"><i class="ph ph-eye"></i> Preview</button>
                     </div>
@@ -144,8 +144,8 @@
             </div>
 
             <!-- Theme Card 2 -->
-            <div class="theme-card fade-in-up delay-1">
-                <div class="theme-image theme-2">
+            <div class="theme-card fade-in-up delay-1" data-category="floral">
+                <div class="theme-image theme-2" style="background-image: url('assets/sample_invitation.png'); background-size: cover; background-position: center;">
                     <div class="theme-overlay">
                         <button class="btn-secondary btn-small"><i class="ph ph-eye"></i> Preview</button>
                     </div>
@@ -157,8 +157,8 @@
             </div>
 
             <!-- Theme Card 3 -->
-            <div class="theme-card fade-in-up delay-2">
-                <div class="theme-image theme-3">
+            <div class="theme-card fade-in-up delay-2" data-category="mewah">
+                <div class="theme-image theme-3" style="background-image: url('assets/sample_invitation_3.png'); background-size: cover; background-position: center;">
                     <div class="theme-overlay">
                         <button class="btn-secondary btn-small"><i class="ph ph-eye"></i> Preview</button>
                     </div>
@@ -179,61 +179,125 @@
         </div>
 
         <div class="pricing-grid">
-            <!-- Basic Plan -->
+            <!-- Foto Statik -->
             <div class="pricing-card fade-in-up">
-                <div class="plan-header">
-                    <h3>Esensial</h3>
-                    <div class="price">Rp 99.000</div>
-                    <p>Untuk kebutuhan sederhana</p>
+                <div class="plan-header" style="text-align: left;">
+                    <div style="font-size: 24px; margin-bottom: 8px; color: #ff9800;"><i class="ph ph-image"></i></div>
+                    <span style="background: #e8f5e9; color: #2e7d32; padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">Gambar</span>
+                    <h3 style="margin-top: 12px; font-size: 1.25rem;">Foto Statik</h3>
+                    <p style="font-size: 0.9rem; color: #666; min-height: 40px; margin-top: 4px;">1 halaman JPG/PNG siap kirim via WA</p>
+                    <p style="font-size: 0.8rem; color: #666; margin-top: 16px; margin-bottom: 4px;">mulai dari</p>
+                    <div class="price" style="font-size: 2rem;">Rp 30.000</div>
+                    <p style="font-size: 0.8rem; color: #999;">tergantung kompleksitas desain</p>
                 </div>
-                <ul class="plan-features">
-                    <li><i class="ph ph-check-circle"></i> Pilihan Tema Terbatas</li>
-                    <li><i class="ph ph-check-circle"></i> Revisi 2x</li>
-                    <li><i class="ph ph-check-circle"></i> Masa Aktif 3 Bulan</li>
-                    <li><i class="ph ph-check-circle"></i> Peta Lokasi Dasar</li>
-                    <li class="disabled"><i class="ph ph-x-circle"></i> Galeri Foto (Maks 5)</li>
-                    <li class="disabled"><i class="ph ph-x-circle"></i> Kustom Musik</li>
+                <ul class="plan-features" style="text-align: left; border-top: 1px solid #eee; padding-top: 1rem; margin-top: 1rem;">
+                    <li><i class="ph ph-minus" style="color: #ccc;"></i> Desain custom nama & tanggal</li>
+                    <li><i class="ph ph-minus" style="color: #ccc;"></i> 1x revisi teks</li>
+                    <li><i class="ph ph-minus" style="color: #ccc;"></i> File resolusi tinggi</li>
                 </ul>
-                <button class="btn-secondary btn-order" data-plan="Esensial" data-price="99.000">Pilih Paket Esensial</button>
+                <button class="btn-secondary btn-order" style="width: 100%; display: flex; justify-content: space-between; align-items: center; border: 1px solid #e0e0e0; background: transparent; color: #333;" data-plan="Foto Statik" data-price="30.000">Tanya lebih lanjut <i class="ph ph-arrow-right"></i></button>
             </div>
 
-            <!-- Premium Plan -->
-            <div class="pricing-card popular fade-in-up delay-1">
-                <div class="popular-badge">Paling Diminati</div>
-                <div class="plan-header">
-                    <h3>Premium</h3>
-                    <div class="price">Rp 199.000</div>
-                    <p>Pilihan terbaik untuk hari spesial</p>
+            <!-- Carousel Multi-Slide -->
+            <div class="pricing-card fade-in-up delay-1">
+                <div class="plan-header" style="text-align: left;">
+                    <div style="font-size: 24px; margin-bottom: 8px; color: #ffca28;"><i class="ph ph-sparkle"></i></div>
+                    <span style="background: #fff8e1; color: #f57f17; padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">Gambar</span>
+                    <h3 style="margin-top: 12px; font-size: 1.25rem;">Carousel Multi-Slide</h3>
+                    <p style="font-size: 0.9rem; color: #666; min-height: 40px; margin-top: 4px;">3-5 slide estetik, kirim sebagai album</p>
+                    <p style="font-size: 0.8rem; color: #666; margin-top: 16px; margin-bottom: 4px;">mulai dari</p>
+                    <div class="price" style="font-size: 2rem;">Rp 50.000</div>
+                    <p style="font-size: 0.8rem; color: #999;">tergantung jumlah slide & desain</p>
                 </div>
-                <ul class="plan-features">
-                    <li><i class="ph ph-check-circle"></i> Semua Tema Premium Terbuka</li>
-                    <li><i class="ph ph-check-circle"></i> Revisi Sepuasnya</li>
-                    <li><i class="ph ph-check-circle"></i> Masa Aktif 1 Tahun</li>
-                    <li><i class="ph ph-check-circle"></i> Navigasi Peta Interaktif</li>
-                    <li><i class="ph ph-check-circle"></i> Galeri Foto (Maks 20)</li>
-                    <li><i class="ph ph-check-circle"></i> Kustom Musik Latar Leluasa</li>
-                    <li><i class="ph ph-check-circle"></i> Buku Tamu & RSVP</li>
+                <ul class="plan-features" style="text-align: left; border-top: 1px solid #eee; padding-top: 1rem; margin-top: 1rem;">
+                    <li><i class="ph ph-minus" style="color: #ccc;"></i> 3-5 slide desain seragam</li>
+                    <li><i class="ph ph-minus" style="color: #ccc;"></i> Cover + detail acara + maps</li>
+                    <li><i class="ph ph-minus" style="color: #ccc;"></i> 2x revisi</li>
                 </ul>
-                <button class="btn-primary btn-order" data-plan="Premium" data-price="199.000">Pilih Paket Premium</button>
+                <button class="btn-secondary btn-order" style="width: 100%; display: flex; justify-content: space-between; align-items: center; border: 1px solid #e0e0e0; background: transparent; color: #333;" data-plan="Carousel Multi-Slide" data-price="50.000">Tanya lebih lanjut <i class="ph ph-arrow-right"></i></button>
             </div>
 
-            <!-- Exclusive Plan -->
+            <!-- Video Animasi Simpel -->
             <div class="pricing-card fade-in-up delay-2">
-                <div class="plan-header">
-                    <h3>Eksklusif</h3>
-                    <div class="price">Rp 399.000</div>
-                    <p>Eksklusivitas dengan layanan VIP</p>
+                <div class="plan-header" style="text-align: left;">
+                    <div style="font-size: 24px; margin-bottom: 8px; color: #ab47bc;"><i class="ph ph-clapperboard"></i></div>
+                    <span style="background: #f3e5f5; color: #8e24aa; padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">Video</span>
+                    <h3 style="margin-top: 12px; font-size: 1.25rem;">Video Animasi Simpel</h3>
+                    <p style="font-size: 0.9rem; color: #666; min-height: 40px; margin-top: 4px;">Video 30-60 detik dengan teks animasi</p>
+                    <p style="font-size: 0.8rem; color: #666; margin-top: 16px; margin-bottom: 4px;">mulai dari</p>
+                    <div class="price" style="font-size: 2rem;">Rp 75.000</div>
+                    <p style="font-size: 0.8rem; color: #999;">tergantung durasi & efek</p>
                 </div>
-                <ul class="plan-features">
-                    <li><i class="ph ph-check-circle"></i> Bebas Desain Kustom Total</li>
-                    <li><i class="ph ph-check-circle"></i> Revisi Sepuasnya Selamanya</li>
-                    <li><i class="ph ph-check-circle"></i> Masa Aktif Selamanya</li>
-                    <li><i class="ph ph-check-circle"></i> Navigasi Peta Interaktif + Peta 3D</li>
-                    <li><i class="ph ph-check-circle"></i> Galeri Foto Tak Terbatas</li>
-                    <li><i class="ph ph-check-circle"></i> Live Streaming Integrasi</li>
-                    <li><i class="ph ph-check-circle"></i> Buku Tamu, RSVP & Scan QR</li>
+                <ul class="plan-features" style="text-align: left; border-top: 1px solid #eee; padding-top: 1rem; margin-top: 1rem;">
+                    <li><i class="ph ph-minus" style="color: #ccc;"></i> Template animasi pilihan</li>
+                    <li><i class="ph ph-minus" style="color: #ccc;"></i> Background musik</li>
+                    <li><i class="ph ph-minus" style="color: #ccc;"></i> 1x revisi</li>
                 </ul>
-                <button class="btn-secondary btn-order" data-plan="Eksklusif" data-price="399.000">Pilih Paket Eksklusif</button>
+                <button class="btn-secondary btn-order" style="width: 100%; display: flex; justify-content: space-between; align-items: center; border: 1px solid #e0e0e0; background: transparent; color: #333;" data-plan="Video Animasi Simpel" data-price="75.000">Tanya lebih lanjut <i class="ph ph-arrow-right"></i></button>
+            </div>
+
+            <!-- Video Sinematik Full -->
+            <div class="pricing-card fade-in-up" style="border: 1px solid #4caf50;">
+                <div class="plan-header" style="text-align: left;">
+                    <div style="font-size: 24px; margin-bottom: 8px; color: #7e57c2;"><i class="ph ph-video-camera"></i></div>
+                    <div style="display: flex; gap: 8px; margin-bottom: 4px;">
+                        <span style="background: #f3e5f5; color: #8e24aa; padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">Video</span>
+                        <span style="background: #4caf50; color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">Terlaris</span>
+                    </div>
+                    <h3 style="margin-top: 12px; font-size: 1.25rem;">Video Sinematik Full</h3>
+                    <p style="font-size: 0.9rem; color: #666; min-height: 40px; margin-top: 4px;">Video premium 60-90 detik, foto animasi</p>
+                    <p style="font-size: 0.8rem; color: #666; margin-top: 16px; margin-bottom: 4px;">mulai dari</p>
+                    <div class="price" style="font-size: 2rem;">Rp 75.000</div>
+                    <p style="font-size: 0.8rem; color: #999;">tergantung panjang & input foto</p>
+                </div>
+                <ul class="plan-features" style="text-align: left; border-top: 1px solid #eee; padding-top: 1rem; margin-top: 1rem;">
+                    <li><i class="ph ph-minus" style="color: #ccc;"></i> Input foto pasangan/keluarga</li>
+                    <li><i class="ph ph-minus" style="color: #ccc;"></i> Transisi sinematik + musik</li>
+                    <li><i class="ph ph-minus" style="color: #ccc;"></i> 2x revisi</li>
+                    <li><i class="ph ph-minus" style="color: #ccc;"></i> Kirim dalam 3 hari kerja</li>
+                </ul>
+                <button class="btn-secondary btn-order" style="width: 100%; display: flex; justify-content: space-between; align-items: center; border: 1px solid #e0e0e0; background: transparent; color: #333;" data-plan="Video Sinematik Full" data-price="75.000">Tanya lebih lanjut <i class="ph ph-arrow-right"></i></button>
+            </div>
+
+            <!-- Web Standar -->
+            <div class="pricing-card fade-in-up delay-1">
+                <div class="plan-header" style="text-align: left;">
+                    <div style="font-size: 24px; margin-bottom: 8px; color: #2196f3;"><i class="ph ph-globe"></i></div>
+                    <span style="background: #e3f2fd; color: #1976d2; padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">Website</span>
+                    <h3 style="margin-top: 12px; font-size: 1.25rem;">Web Standar</h3>
+                    <p style="font-size: 0.9rem; color: #666; min-height: 40px; margin-top: 4px;">Landing page undangan online aktif 6 bulan</p>
+                    <p style="font-size: 0.8rem; color: #666; margin-top: 16px; margin-bottom: 4px;">mulai dari</p>
+                    <div class="price" style="font-size: 2rem;">Rp 250.000</div>
+                    <p style="font-size: 0.8rem; color: #999;">tergantung fitur tambahan</p>
+                </div>
+                <ul class="plan-features" style="text-align: left; border-top: 1px solid #eee; padding-top: 1rem; margin-top: 1rem;">
+                    <li><i class="ph ph-minus" style="color: #ccc;"></i> Link undangan personal</li>
+                    <li><i class="ph ph-minus" style="color: #ccc;"></i> Countdown timer</li>
+                    <li><i class="ph ph-minus" style="color: #ccc;"></i> Google Maps terintegrasi</li>
+                    <li><i class="ph ph-minus" style="color: #ccc;"></i> RSVP form</li>
+                </ul>
+                <button class="btn-secondary btn-order" style="width: 100%; display: flex; justify-content: space-between; align-items: center; border: 1px solid #e0e0e0; background: transparent; color: #333;" data-plan="Web Standar" data-price="250.000">Tanya lebih lanjut <i class="ph ph-arrow-right"></i></button>
+            </div>
+
+            <!-- Web Premium -->
+            <div class="pricing-card fade-in-up delay-2">
+                <div class="plan-header" style="text-align: left;">
+                    <div style="font-size: 24px; margin-bottom: 8px; color: #00bcd4;"><i class="ph ph-diamond"></i></div>
+                    <span style="background: #e0f7fa; color: #0097a7; padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">Website</span>
+                    <h3 style="margin-top: 12px; font-size: 1.25rem;">Web Premium</h3>
+                    <p style="font-size: 0.9rem; color: #666; min-height: 40px; margin-top: 4px;">Web interaktif + galeri + musik otomatis</p>
+                    <p style="font-size: 0.8rem; color: #666; margin-top: 16px; margin-bottom: 4px;">mulai dari</p>
+                    <div class="price" style="font-size: 2rem;">Rp 400.000</div>
+                    <p style="font-size: 0.8rem; color: #999;">tergantung kustomisasi & masa aktif</p>
+                </div>
+                <ul class="plan-features" style="text-align: left; border-top: 1px solid #eee; padding-top: 1rem; margin-top: 1rem;">
+                    <li><i class="ph ph-minus" style="color: #ccc;"></i> Desain eksklusif custom</li>
+                    <li><i class="ph ph-minus" style="color: #ccc;"></i> Galeri foto + musik autoplay</li>
+                    <li><i class="ph ph-minus" style="color: #ccc;"></i> RSVP + ucapan digital</li>
+                    <li><i class="ph ph-minus" style="color: #ccc;"></i> Link cantik (/namakamu)</li>
+                    <li><i class="ph ph-minus" style="color: #ccc;"></i> 3x revisi</li>
+                </ul>
+                <button class="btn-secondary btn-order" style="width: 100%; display: flex; justify-content: space-between; align-items: center; border: 1px solid #e0e0e0; background: transparent; color: #333;" data-plan="Web Premium" data-price="400.000">Tanya lebih lanjut <i class="ph ph-arrow-right"></i></button>
             </div>
         </div>
     </section>

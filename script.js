@@ -86,3 +86,58 @@ mobileBtn.addEventListener('click', () => {
     // Basic alert for now, can be expanded to proper mobile menu
     alert('Fitur menu mobile akan membuka dropdown. Untuk sekarang, silakan scroll secara vertikal.');
 });
+
+// Image Slideshow for Hero Mockup
+const mockupImages = [
+    'assets/sample_invitation.png',
+    'assets/sample_invitation_2.png',
+    'assets/sample_invitation_3.png'
+];
+let currentMockupIndex = 0;
+const slideshowImage = document.getElementById('slideshow-image');
+
+if (slideshowImage) {
+    // Change image every 3.5 seconds
+    setInterval(() => {
+        // Fade out
+        slideshowImage.style.opacity = '0';
+        
+        // Wait for fade out transition (0.5s) before changing source
+        setTimeout(() => {
+            currentMockupIndex = (currentMockupIndex + 1) % mockupImages.length;
+            slideshowImage.src = mockupImages[currentMockupIndex];
+            
+            // Fade in
+            slideshowImage.style.opacity = '1';
+        }, 500);
+    }, 3500);
+}
+
+// Theme Filtering Logic
+const filterBtns = document.querySelectorAll('.filter-btn');
+const themeCards = document.querySelectorAll('.theme-card');
+
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterBtns.forEach(b => b.classList.remove('active'));
+        // Add active class to clicked button
+        btn.classList.add('active');
+        
+        const filterValue = btn.getAttribute('data-filter');
+        
+        themeCards.forEach(card => {
+            if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                card.style.display = 'block';
+                // Add a small delay to trigger animation again if needed
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 10);
+            } else {
+                card.style.display = 'none';
+                card.style.opacity = '0';
+            }
+        });
+    });
+});

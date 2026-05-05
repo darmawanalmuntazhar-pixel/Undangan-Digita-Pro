@@ -36,7 +36,7 @@ animatedElements.forEach(el => observer.observe(el));
 
 // WhatsApp Order Integration
 const orderButtons = document.querySelectorAll('.btn-order');
-const waNumber = "6281234567890"; // Ganti dengan nomor WhatsApp sebenarnya (format internasional tanpa +)
+const waNumber = "6287884209769"; // Ganti dengan nomor WhatsApp sebenarnya (format internasional tanpa +)
 
 orderButtons.forEach(button => {
     button.addEventListener('click', function() {
